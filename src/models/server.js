@@ -45,9 +45,9 @@ class Server {
     }
     
     routes() {
-        this.app.get('/', rutaHome);
-        this.app.get('/home', rutaHome);
-        this.app.get('/test', rutaTest);
+        this.app.use('/', rutaHome);
+        this.app.use('/home', rutaHome);
+        this.app.use('/test', rutaTest);
 
         /*=======================================================================*/
         /* Error 404 */ //Nota: este bloque debe ir siempre al final de las rutas
